@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { useCalculator } from "../contexts/CalculateContext";
 import { Button } from "./Button";
@@ -15,7 +16,10 @@ function Hello() {
       </aside>
       <article>
         {!calculating ? (
-          <div>
+          <motion.div
+            animate={{ x: -10 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
             <h3>What is BMI?</h3>
             <p className="article-text">
               The body mass index (BMI) is a measure that uses your height and
@@ -27,7 +31,7 @@ function Hello() {
               {" "}
               Calculate your BMI
             </Button>
-          </div>
+          </motion.div>
         ) : (
           <div>
             <Insert />

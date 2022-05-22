@@ -16,7 +16,7 @@ function Insert() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      setUserData(JSON.stringify(values));
+      setUserData(values);
       navigate("result");
     },
   });
