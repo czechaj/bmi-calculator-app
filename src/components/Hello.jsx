@@ -17,6 +17,7 @@ function Hello() {
       <article>
         {!calculating ? (
           <motion.div
+            className="info"
             animate={{ x: -10 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >

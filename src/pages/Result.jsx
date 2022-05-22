@@ -24,10 +24,14 @@ function Result() {
 
   return (
     <section>
-      <aside>
+      <aside className="result">
         <h3>Welcome {userData.name}</h3>
-        <p>Your BMI is {calculated}</p>
-        <p>Your BMI category is {bmiCategory}</p>
+        <p>
+          Your BMI is <span>{calculated}</span>
+        </p>
+        <p>
+          Your BMI category is <span> {bmiCategory} </span>{" "}
+        </p>
         <Button
           onClick={() => {
             navigate("/");

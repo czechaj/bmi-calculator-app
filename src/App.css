@@ -5,18 +5,26 @@
 
 header {
   display: flex;
-  height: 8vh;
-  justify-content: center;
-  align-items: center;
+  height: 9vh;
+  justify-content: flex-start;
   background-color: rgb(255, 198, 198);
+  padding-left: 1rem;
 }
 
 header a {
+  display: flex;
   text-decoration: none;
   font-size: large;
   color: rgb(65, 65, 65);
   font-weight: 700;
   width: max-content;
+  align-items: center;
+}
+
+header a img {
+  width: 5vw;
+  height: 7vh;
+  margin-right: .4rem;
 }
 
 section {
@@ -29,11 +37,12 @@ section {
 
 section aside {
   margin-right: 2rem;
-  position: relative;
 }
 
 section aside img {
   border-radius: 9%;
+  width: 30vw;
+  height: 30vh;
 }
 
 section article div {
@@ -83,11 +92,6 @@ form button {
   font-weight: 600;
 }
 
-.result {
-  height: 40vh;
-  margin: 20vh 20vw;
-  align-items: center;
-}
 
 .diet {
   border-radius: 13px;
@@ -97,7 +101,7 @@ form button {
 }
 
 .diet h1 {
-  font-weight: 500;
+  font-weight: 800;
 }
 
 section article ul {
@@ -106,11 +110,88 @@ section article ul {
   list-style: circle;
 }
 
+
+aside p span {
+  font-weight: bold;
+}
+
 footer {
   position: fixed;
   bottom: 0;
   height: 4vh;
   width: 92%;
   text-align: end;
+
+}
+
+@media screen and (max-width:600px) {
+
+  header a {
+    font-size: medium;
+  }
+
+  header a img {
+    width: 13vw;
+    height: 7vh;
+    margin-right: .4rem;
+  }
+
+
+  section {
+    margin: 10vh 5vw;
+    display: block;
+    height: 40vh;
+    align-items: center;
+  }
+
+  section aside {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  section aside img {
+    border-radius: 9%;
+    width: 80vw;
+    height: 25vh;
+  }
+
+
+  section article .info {
+    display: contents;
+    justify-content: center;
+    min-width: 80vw;
+
+  }
+
+  form {
+    width: 73vw;
+    margin: 2rem auto;
+  }
+
+  input {
+    padding: 0.16em 0.4em;
+    width: auto;
+  }
+
+  .result {
+    display: block;
+  }
+
+  .diet {
+    border-radius: 13px;
+    padding: 2rem;
+    background-color: rgb(255, 198, 198, 0.5);
+  }
+
+  section article ul {
+    width: 50vw;
+  }
+
+  footer {
+    height: 7vh;
+    width: 92%;
+    text-align: end;
+  }
 
 }
