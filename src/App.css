@@ -118,13 +118,17 @@ aside p span {
 footer {
   position: fixed;
   bottom: 0;
+  right: 0;
   height: 4vh;
-  width: 92%;
-  text-align: end;
+  width: 12%;
+  text-align: start;
 
 }
 
 @media screen and (max-width:600px) {
+  html {
+    font-size: 11px;
+  }
 
   header a {
     font-size: medium;
@@ -138,9 +142,9 @@ footer {
 
 
   section {
-    margin: 10vh 5vw;
+    margin: 5vh 5vw;
     display: block;
-    height: 40vh;
+    height: 76vh;
     align-items: center;
   }
 
@@ -166,7 +170,7 @@ footer {
 
   form {
     width: 73vw;
-    margin: 2rem auto;
+    margin: .2rem auto;
   }
 
   input {
@@ -189,6 +193,7 @@ footer {
   }
 
   footer {
+    position: relative;
     height: 7vh;
     width: 92%;
     text-align: end;
